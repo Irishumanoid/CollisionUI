@@ -1,4 +1,4 @@
-package UI.Vocabulary;
+package UI.UnrelatedJavaFXStuff.Vocabulary;
 
 
 import java.util.ArrayList;

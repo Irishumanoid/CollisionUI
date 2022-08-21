@@ -1,4 +1,4 @@
-package UI;
+package UI.UnrelatedJavaFXStuff;
 
 import javafx.application.Application;
 import javafx.scene.Scene;

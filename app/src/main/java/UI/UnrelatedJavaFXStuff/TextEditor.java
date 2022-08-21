@@ -1,4 +1,4 @@
-package UI;
+package UI.UnrelatedJavaFXStuff;
 
 import java.util.Arrays;
 

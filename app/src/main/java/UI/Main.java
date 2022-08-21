@@ -1,5 +1,6 @@
 package UI;
 
+import UI.UnrelatedJavaFXStuff.TicTacToeApplication;
 import javafx.application.Application;
 
 import javafx.scene.*;
