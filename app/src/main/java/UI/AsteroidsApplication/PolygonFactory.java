@@ -55,12 +55,12 @@ public class PolygonFactory {
 
             polygon.getPoints().addAll(new Double[] {
                 size, 0.0,
-                size*r2, -size*r4,
-                size*r1, -size*r6,
-                -size*r3, -size*r5,
+                size*r1, -size*r4,
+                size*r3, -size*r6,
+                -size*r2, -size*r5,
                 -size*r3, size*r6,
-                -size*r1, size*r6,
-                size*r2, size*r4
+                -size*r1, size*r4,
+                size*r2, size*r5
             });
             break;
         case 8:
@@ -73,11 +73,11 @@ public class PolygonFactory {
 
             polygon.getPoints().addAll(new Double[] {
                 size, 0.0,
-                size*s2, -size*s4,
-                -size*s1, -size*s6,
-                -size*s3, -size*s5,
-                -size*s3, size*s5,
-                -size*s1, size*s6,
+                size*s3, -size*s5,
+                -size*s3, -size*s6,
+                -size*s1, -size*s4,
+                -size*s1, size*s5,
+                -size*s3, size*s6,
                 size*s2, size*s4,
                 size*s3, size*s5
             });
@@ -94,14 +94,14 @@ public class PolygonFactory {
 
             polygon.getPoints().addAll(new Double[]{ 
                 size, 0.0,
-                size*t3, -size*t5,
-                size*t2, -size*t8,
+                size*t1, -size*t5,
+                size*t3, -size*t7,
                 -size*t4, -size*t7,
-                -size*t1, -size*t6,
+                -size*t2, -size*t5,
                 -size*t1, size*t6,
-                -size*t4, size*t7,
-                size*t2, size*t8,
-                size*t3, size*t5
+                -size*t4, size*t8,
+                size*t3, size*t7,
+                size*t2, size*t6
             });
             break;
         case 10:
