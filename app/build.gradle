@@ -1,4 +1,3 @@
-
 plugins {
     id 'java' 
     id 'application'
@@ -30,5 +29,3 @@ javafx {
 
 //run as a gradle application, not directly from terminal
 mainClassName = 'UI.AsteroidsApplication.AsteroidsApplication'
-
- 

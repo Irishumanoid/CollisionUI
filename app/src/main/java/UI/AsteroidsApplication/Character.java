@@ -5,8 +5,8 @@ import javafx.scene.shape.Polygon;
 import javafx.scene.shape.Shape;
 
 public abstract class Character {
-    private Polygon character;
-    private Point2D movement;
+    protected Polygon character;
+    protected Point2D movement;
 
     public Character(Polygon polygon, int x, int y) {
         this.character = polygon;
@@ -57,7 +57,7 @@ public abstract class Character {
     public void accelerate() {
         double changeX = Math.cos(Math.toRadians(character.getRotate()));
         double changeY = Math.sin(Math.toRadians(character.getRotate()));
-
+        
         changeX *= 0.05;
         changeY *= 0.05;
 

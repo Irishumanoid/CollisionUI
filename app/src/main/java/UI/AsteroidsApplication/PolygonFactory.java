@@ -116,15 +116,15 @@ public class PolygonFactory {
             
             polygon.getPoints().addAll(new Double[] {
                 size, 0.0,
-                size*u3, -size*u5,
-                size*u2, -size*u8,
+                size*u2, -size*u5,
+                size*u3, -size*u7,
                 -size*u4, -size*u7,
                 -size*u1, -size*u6,
                 -size, 0.0,
-                -size*u1, size*u6,
-                -size*u4, -size*u7,
-                size*u2, size*u8,
-                size*u3, size*u5
+                -size*u2, size*u6,
+                -size*u4, size*u8,
+                size*u4, size*u6,
+                size*u2, size*u5
             });
             break;
     }

@@ -2,6 +2,7 @@ package UI.AsteroidsApplication;
 
 import java.util.Random;
 
+
 public class Asteroid extends Character {
 
     private double rotationalMovement;
@@ -15,7 +16,7 @@ public class Asteroid extends Character {
         int accelerationAmount = 1 + rand.nextInt(10);
     
         for (int i = 0; i < accelerationAmount; i++) {
-            accelerate();
+                accelerate();
         }
 
         this.rotationalMovement = 0.5 - rand.nextDouble();

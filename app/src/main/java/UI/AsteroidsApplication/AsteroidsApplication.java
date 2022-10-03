@@ -64,7 +64,7 @@ public class AsteroidsApplication extends Application {
                     ship.turnRight();
                 } else if (keysPressed.getOrDefault(KeyCode.UP, false)) {
                     ship.accelerate();
-                 } else if (keysPressed.getOrDefault(KeyCode.SPACE, false) && projectiles.size() < 4) {
+                } else if (keysPressed.getOrDefault(KeyCode.SPACE, false) && projectiles.size() < 4) {
                     Projectile projectile = new Projectile((int) ship.getCharacter().getTranslateX(), (int) ship.getCharacter().getTranslateY());
                     projectile.getCharacter().setRotate(ship.getCharacter().getRotate());
                     projectiles.add(projectile);
@@ -111,11 +111,14 @@ public class AsteroidsApplication extends Application {
 
 
                 if (Math.random() < 0.005) {
-                    Asteroid asteroid = new Asteroid(WIDTH, HEIGHT);
+                    Asteroid asteroid;
+                    asteroid = new Asteroid(WIDTH, HEIGHT);
+
                     if (!asteroid.checkCollision(ship)) {
                         asteroids.add(asteroid);
                         pane.getChildren().add(asteroid.getCharacter());
                     }
+
                 }
             }
             
