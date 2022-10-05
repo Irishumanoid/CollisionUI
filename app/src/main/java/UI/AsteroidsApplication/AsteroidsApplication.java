@@ -31,6 +31,7 @@ public class AsteroidsApplication extends Application {
         List<Asteroid> asteroids = new ArrayList<>();
         List<Projectile> projectiles = new ArrayList<>();
         
+        //creates 5 asteroids
         for (int i = 0; i < 5; i++) {
             Random rand = new Random();
             Asteroid ast = new Asteroid(rand.nextInt(WIDTH/3), rand.nextInt(HEIGHT/3));
@@ -56,6 +57,7 @@ public class AsteroidsApplication extends Application {
         
         new AnimationTimer() {
 
+            //if an arrow key is pressed the ship turns left or right or shoots
             @Override
             public void handle(long now) {
                 if (keysPressed.getOrDefault(KeyCode.LEFT, false)) {
@@ -75,6 +77,7 @@ public class AsteroidsApplication extends Application {
                     pane.getChildren().add(projectile.getCharacter());
                 }
 
+                //moves ship and asteroids, if asteroid collided with ship it stops
                 ship.move();
                 asteroids.forEach(asteroid -> asteroid.move());
                 projectiles.forEach(projectile -> projectile.move());
@@ -86,6 +89,7 @@ public class AsteroidsApplication extends Application {
                 });
 
         
+                //removes hit asteroids and adds points
                 List<Projectile> projectilesToRemove = projectiles.stream().filter(projectile -> { 
                     List<Asteroid> collisions = asteroids.stream()
                     .filter(asteroid -> asteroid.checkCollision(projectile))
@@ -110,6 +114,7 @@ public class AsteroidsApplication extends Application {
                 });
 
 
+                //addds asteroid
                 if (Math.random() < 0.005) {
                     Asteroid asteroid;
                     asteroid = new Asteroid(WIDTH, HEIGHT);
