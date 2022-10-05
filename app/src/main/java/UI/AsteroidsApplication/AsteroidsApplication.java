@@ -71,9 +71,11 @@ public class AsteroidsApplication extends Application {
 
                     projectile.accelerate();
                     projectile.setMovement(projectile.getMovement().normalize().multiply(3));
-                
                     pane.getChildren().add(projectile.getCharacter());
+                } else if (keysPressed.getOrDefault(KeyCode.DOWN, false)) {
+                    ship.deccelerate();
                 }
+
 
                 ship.move();
                 asteroids.forEach(asteroid -> asteroid.move());
