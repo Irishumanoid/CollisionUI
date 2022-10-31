@@ -1,7 +1,9 @@
 plugins {
     id 'java' 
+    id 'java-library'
     id 'application'
     id 'org.openjfx.javafxplugin' version '0.0.13'
+    id 'maven-publish'
 }
 
 repositories {
@@ -10,15 +12,13 @@ repositories {
 
 dependencies {
     implementation gradleApi()
-    // Use JUnit Jupiter for testing.
-    testImplementation 'org.junit.jupiter:junit-jupiter:5.7.2'
 
-    // This dependency is used by the application.
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.7.2'
     implementation 'com.google.guava:guava:30.1.1-jre'
 }
-
+ 
 tasks.named('test') {
-    // Use JUnit Platform for unit tests.
+    // Use JUnit Platform for unit tests.    
     useJUnitPlatform()
 }
 
@@ -26,6 +26,7 @@ javafx {
    modules = [ 'javafx.controls', 'javafx.fxml', 'javafx.web' ]
    version = '18.0.1' 
 }
+
 
 //run as a gradle application, not directly from terminal
 mainClassName = 'UI.AsteroidsApplication.AsteroidsApplication'

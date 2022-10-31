@@ -9,3 +9,4 @@
 
 rootProject.name = 'JavaFXProject'
 include('app')
+include('gson:2.9')

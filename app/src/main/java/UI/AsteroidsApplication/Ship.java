@@ -42,7 +42,7 @@ public class Ship extends Character {
  
          try {
              Long returner = future.get(2, TimeUnit.SECONDS);
-             returner.notify(); //the values should be updated now?
+             returner.notify();
          } catch (InterruptedException | ExecutionException | TimeoutException e) {
              e.printStackTrace();
          }
